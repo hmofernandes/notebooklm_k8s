@@ -78,7 +78,9 @@ Para sustentar a definição do **Kubernetes**, a sua **arquitetura** e os **pro
 * **Tutorials | Kubernetes**[13]: Fundamenta a aplicação prática em cenários reais, como atualizações progressivas (*rolling updates*), tolerância a falhas e escalamento de aplicações.
 * **CNCF [Cloud Native Computing Foundation] - YouTube**[14]: Suporta a concetualização do ecossistema *cloud-native* para orquestração dinâmica de microserviços em containers para otimização de recursos.
 * **GitHub - kelseyhightower/kubernetes-the-hard-way**[15][16]: Serve de referência para demonstrar como estes componentes do plano de controlo e nós interagem na prática num cluster.
-  
+
+
+---
 Qual é a diferença entre Docker, containers e Kubernetes? Responde em português europeu, com exemplos práticos, explicações progressivas e citações das fontes utilizadas.
 Para compreender a diferença entre **Containers**, **Docker** e **Kubernetes**, o ideal é analisar estas tecnologias de forma progressiva, partindo da unidade básica de isolamento até à gestão de sistemas à grande escala.
 
@@ -130,6 +132,8 @@ Para fixar a diferença de forma intuitiva, imagine a gestão de mercadorias no 
 2. **Implantação em Produção (Kubernetes):** A equipa de engenharia pega nessa imagem Docker e envia-a para um cluster Kubernetes[4][8].
 3. **Orquestração:** O Kubernetes cria 5 instâncias dessa API distribuídas por 3 servidores diferentes, configura o balancador de carga de entrada (*Ingress*) e monitoriza a integridade dos serviços[4]. Se um dos servidores avariar, o Kubernetes recria automaticamente os containers afetados nos restantes servidores operacionais[9][10].
 
+
+---
 Como funciona a arquitetura de um cluster? Responde em português europeu, com exemplos práticos, explicações progressivas e citações das fontes utilizadas.
 A arquitetura de um cluster Kubernetes assenta num modelo distribuído composto por duas camadas principais: o **Plano de Controlo** (*Control Plane*) e os **Nós de Trabalho** (*Worker Nodes*)[1][2].
 
@@ -176,6 +180,8 @@ Para perceber como todos estes componentes colaboram na prática, veja o fluxo d
 4. **Execução Local:** O **kubelet** do nó selecionado recebe a notificação da API e instrui o **Container Runtime** a descarregar a imagem e iniciar os containers[5].
 5. **Configuração de Rede:** O **kube-proxy** atualiza as regras de rede no nó para permitir que o tráfego chegue aos novos Pods através de um *Service*[5].
 
+
+---
 O que são Pods, Deployments, ReplicaSets e Services? Responde em português europeu, com exemplos práticos, explicações progressivas e citações das fontes utilizadas.
 Para compreender como o Kubernetes organiza e executa aplicações, é útil visualizar estes quatro conceitos de forma **progressiva e hierárquica**[1].
 
