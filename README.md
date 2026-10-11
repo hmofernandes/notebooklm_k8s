@@ -132,7 +132,20 @@ Para fixar a diferença de forma intuitiva, imagine a gestão de mercadorias no 
 2. **Implantação em Produção (Kubernetes):** A equipa de engenharia pega nessa imagem Docker e envia-a para um cluster Kubernetes[4][8].
 3. **Orquestração:** O Kubernetes cria 5 instâncias dessa API distribuídas por 3 servidores diferentes, configura o balancador de carga de entrada (*Ingress*) e monitoriza a integridade dos serviços[4]. Se um dos servidores avariar, o Kubernetes recria automaticamente os containers afetados nos restantes servidores operacionais[9][10].
 
+### Fontes Utilizadas e o seu Contributo
 
+1. **Docker Docs**:
+  * **Contributo:** Fundamentou a definição do **Docker** como a plataforma e conjunto de ferramentas de desenvolvimento para criar, construir (*build*), empacotar e executar containers individuais[1][2].
+2. **Concepts | Kubernetes**:
+  * **Contributo:** Sustentou a definição concetual de **containers** como tecnologia de empacotamento de aplicações com as suas dependências[3][4], e do **Kubernetes** como orquestrador que gere o ciclo de vida de objetos e workloads num cluster[3].
+3. **1\. Fundamentos e arquitetura**:
+  * **Contributo:** Serviu de base para a explicação progressiva, organizando a evolução técnica desde a unidade de containerização até aos componentes de orquestração no cluster (nós, Pods, Control Plane e Worker Nodes)[7].
+4. **Kubernetes Documentation | Kubernetes**:
+  * **Contributo:** Forneceu o enquadramento do **Kubernetes** como motor *open-source* de orquestração de containers alojado pela CNCF, focado na automação de *deployment*, escalamento e gestão de aplicações[8].
+5. **CNCF [Cloud Native Computing Foundation] - YouTube**:
+  * **Contributo:** Enquadrou a visão da arquitetura *cloud-native*, na qual as aplicações são divididas em microserviços empacotados em containers e orquestrados dinamicamente para otimização de recursos[9].
+6. **Cloud Native Training Courses | CNCF**:
+  * **Contributo:** Apoiou a fundamentação sobre os conceitos essenciais de containers (*Container Fundamentals*) e a forma como interagem com a rede e o armazenamento antes da camada de orquestração[10][11].
 ---
 Como funciona a arquitetura de um cluster? Responde em português europeu, com exemplos práticos, explicações progressivas e citações das fontes utilizadas.
 A arquitetura de um cluster Kubernetes assenta num modelo distribuído composto por duas camadas principais: o **Plano de Controlo** (*Control Plane*) e os **Nós de Trabalho** (*Worker Nodes*)[1][2].
@@ -180,6 +193,20 @@ Para perceber como todos estes componentes colaboram na prática, veja o fluxo d
 4. **Execução Local:** O **kubelet** do nó selecionado recebe a notificação da API e instrui o **Container Runtime** a descarregar a imagem e iniciar os containers[5].
 5. **Configuração de Rede:** O **kube-proxy** atualiza as regras de rede no nó para permitir que o tráfego chegue aos novos Pods através de um *Service*[5].
 
+### Fontes Utilizadas e o seu Contributo
+
+1. **Kubernetes Components | Kubernetes**:
+  * **Contributo:** Foi a fonte principal para a discriminação detalhada dos componentes do Plano de Controlo (`kube-apiserver`, `etcd`, `kube-scheduler`, `kube-controller-manager`, `cloud-controller-manager`), dos Nós de Trabalho (`kubelet`, `kube-proxy`, `Container Runtime`) e dos Addons do cluster (DNS, Web UI, Monitorização e Logging).
+2. **1\. Fundamentos e arquitetura**:
+  * **Contributo:** Fundamentou a estrutura concetual da arquitetura distribuída, cobrindo os conceitos de cluster, nós, Pods, a separação entre Control Plane e Worker Nodes, e a comunicação entre os vários componentes.
+3. **Concepts | Kubernetes**:
+  * **Contributo:** Sustentou a definição técnica da arquitetura do cluster, especificando como os controladores gerem o estado pretendido e como as abstrações de computação, rede e armazenamento se articulam.
+4. **GitHub - kelseyhightower/kubernetes-the-hard-way**:
+  * **Contributo:** Serviu de referência prática para o fluxo de interação e interligação entre os vários binários do Kubernetes na construção de um cluster a partir do zero (*bootstrapping*).
+5. **Kubernetes Documentation | Kubernetes**:
+  * **Contributo:** Forneceu o enquadramento global da arquitetura de orquestração de containers e dos seus princípios fundamentais no ecossistema *cloud-native*.
+6. **Overview | Prometheus**:
+  * **Contributo:** Apoiou a fundamentação dos Addons de monitorização de métricas e recolha de telemetria dentro da arquitetura do cluster.
 
 ---
 O que são Pods, Deployments, ReplicaSets e Services? Responde em português europeu, com exemplos práticos, explicações progressivas e citações das fontes utilizadas.
